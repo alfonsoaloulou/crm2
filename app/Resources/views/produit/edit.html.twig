@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Modifier Produit
+{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+
+        {{ include('modulesUsed/menu.html.twig') }}
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Modifier Produit</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    {% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+                    {{ form_start(edit_form) }}
+                    {{ form_widget(edit_form) }}
+                    <table class="table">
+                        <tr>
+                            <th>
+                                <input type="submit" value="Modifier" type="button" class="btn btn-info"/>
+                                {{ form_end(edit_form) }}
+                            </th>
+                            <th>
+                                {{ form_start(delete_form) }}
+                                <input type="submit" type="button" class="btn btn-danger" value="Supprimer" onclick="alert('Produit supprimé!');">
+                                {{ form_end(delete_form) }}
+                            </th>
+                            <td>
+                                <a type="button" class="btn btn-success" href="{{ path('produit_index') }}">
+                                    <i class="fa fa-angle-double-left"></i>
+                                    Liste des Produits</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+{% endblock %}

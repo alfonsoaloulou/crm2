@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Prospect</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ prospect.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ prospect.nom }}</td>
+            </tr>
+            <tr>
+                <th>Fonction</th>
+                <td>{{ prospect.fonction }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ prospect.tel }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ prospect.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('prospect_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('prospect_edit', { 'id': prospect.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

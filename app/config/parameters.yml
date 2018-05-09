@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: crm2
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: taktak@gmail.com
+    mailer_password: null
+    secret: 62d88023c6fc88f1dd0464d6e1fc803663809ee0

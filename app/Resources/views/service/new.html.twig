@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Creation d'un Services
+{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+
+        {{ include('modulesUsed/menu.html.twig') }}
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Creation d'un Service</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <table class="table">
+                        <tr>
+                            <td>
+                            <input class="btn btn-primary" type="submit" value="+ Créer" />
+                            {{ form_end(form) }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <a type="button" class="btn btn-success" href="{{ path('service_index') }}">
+                                <i class="fa fa-angle-double-left"></i>
+                                Liste des Services</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+{% endblock %}
